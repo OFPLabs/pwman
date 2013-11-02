@@ -1,3 +1,5 @@
+package de.ofplabs.mypassword_manager;
+
 import java.security.SecureRandom;
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
