@@ -6,15 +6,11 @@ import java.security.NoSuchAlgorithmException;
 
 
 public class MD5_salt {
- public static void main(String[] args) {
-	 String password = "mypassword";
-	 String salt = "Random$SaltValue#WithSpecialCharacters12@$@4&#%^$*";
-//salt must change
-	 String hash = md5(password + salt);
-	 
-}
+
  public static String md5(String input) {
-     
+	//salt must change
+	 String salt = "Random$SaltValue#WithSpecialCharacters12@$@4&#%^$*";
+	 
      String md5 = null;
       
      if(null == input) return null;
@@ -23,7 +19,7 @@ public class MD5_salt {
           
      
      MessageDigest digest = MessageDigest.getInstance("MD5");
-      
+      input = input + salt;
      
      digest.update(input.getBytes(), 0, input.length());
 
@@ -34,6 +30,7 @@ public class MD5_salt {
 
          e.printStackTrace();
      }
+     
      return md5;
  }
 }
