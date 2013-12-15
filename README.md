@@ -1,4 +1,4 @@
-=====
+===============
 
 This is an Android App Project developed and maintained by the OFPLabs Team.
 
