@@ -1,7 +1,6 @@
 package de.ofplabs.mypassword_manager;
 
 import java.util.Locale;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -17,6 +16,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+
+//test push
 public class MainActivity extends FragmentActivity {
 
 	/**
