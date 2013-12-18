@@ -3,8 +3,11 @@
 
     <string name="app_name">MyPassword-Manager</string>
     <string name="action_settings">Settings</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
+    <string name="title_activity_first_start">Sign Up</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_main">Your Accounts</string>
+    <string name="title_activity_add_account">AddAccountActivity</string>
+    <string name="title_activity_second_start">SecondStartActivity</string>
+    <string name="title_activity_account_view">AccountViewActivity</string>
 
 </resources>
