@@ -18,12 +18,13 @@ public class Account
 	private String note;
 	private String email;
 	
-	public Account(String name, String password) { this(name,password,null); }
-	public Account(String name, String password, String note)
+	public Account(String name, String password) { this(name,password,null,null); }
+	public Account(String name, String password, String note, String email)
 	{
 		this.name = name;
 		this.password = password;
 		this.note = note;
+		this.email = email;
 	}
 
 
