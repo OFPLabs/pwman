@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 import android.support.v4.app.NavUtils;
 
 /*
@@ -24,24 +25,16 @@ public class AddAccountActivity extends Activity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_add_account);
 		// Show the Up button in the action bar.
-		setupActionBar();
-	}
-
-	/**
-	 * Set up the {@link android.app.ActionBar}.
-	 */
-	private void setupActionBar()
-	{
-
 		getActionBar().setDisplayHomeAsUpEnabled(true);
-
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
+		// at the moment, we dont need anything in the actionbar here
+		
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.add_account, menu);
+		// getMenuInflater().inflate(R.menu.add_account, menu);
 		return true;
 	}
 
@@ -59,9 +52,14 @@ public class AddAccountActivity extends Activity
 				// http://developer.android.com/design/patterns/navigation.html#up-vs-back
 				//
 				NavUtils.navigateUpFromSameTask(this);
+				// As the user hasnt saved the new Account, we have to notify him by a toast
+				Toast toast = Toast.makeText(getApplicationContext(), "Cancelled adding new Account", Toast.LENGTH_SHORT);
+				toast.show();
 				return true;
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	
 
 }

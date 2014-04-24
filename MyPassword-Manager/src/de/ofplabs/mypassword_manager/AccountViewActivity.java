@@ -1,16 +1,17 @@
 
 package de.ofplabs.mypassword_manager;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.support.v4.app.NavUtils;
+import android.widget.Toast;
 
 /*
  * Code for AccountViewActivity which is launched when you choose an account entry in MainActivity.
  * Here you see all Account data like name, password, comment etc.
- * By pressing the back button you get back to the MainActivity.
+ * By pressing the back button or up-button in the actionbar you get back to the MainActivity.
  * 
  * Of course a possibility to edit and make changes on the account has to be implemented later.
  */
@@ -24,17 +25,7 @@ public class AccountViewActivity extends Activity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_account_view);
 		// Show the Up button in the action bar.
-		setupActionBar();
-	}
-
-	/**
-	 * Set up the {@link android.app.ActionBar}.
-	 */
-	private void setupActionBar()
-	{
-
 		getActionBar().setDisplayHomeAsUpEnabled(true);
-
 	}
 
 	@Override

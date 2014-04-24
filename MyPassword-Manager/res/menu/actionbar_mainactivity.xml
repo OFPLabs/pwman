@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- This .xml contains declarations used for the actionbar in the MainActivity -->
+    <item 
+        android:id="@+id/action_new"
+        android:icon="@drawable/ic_action_new"
+        android:title="@string/ab_new"
+        android:showAsAction="always"
+        />
+    <item 
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_action_settings"
+        android:title="@string/ab_settings"
+        android:showAsAction="always"
+        />
+</menu>

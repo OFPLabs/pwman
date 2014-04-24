@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="de.ofplabs.mypassword_manager"
+    android:installLocation="auto"
     android:versionCode="1"
-    android:versionName="1.0" android:installLocation="auto">
+    android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -12,23 +13,17 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/CustomActionBarTheme" >
         <activity
             android:name="de.ofplabs.mypassword_manager.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="de.ofplabs.mypassword_manager.FirstStartActivity"
-            android:label="@string/title_activity_first_start" android:launchMode="standard">
-            <intent-filter>
-            	<action android:name="android.intent.action.MAIN" />
-            	<category android:name="android.intent.category.LAUNCHER" />
-        	</intent-filter>
-        </activity>
+     
         <activity
             android:name="de.ofplabs.mypassword_manager.AddAccountActivity"
             android:label="@string/title_activity_add_account"
@@ -38,15 +33,30 @@
                 android:value="de.ofplabs.mypassword_manager.MainActivity" />
         </activity>
         <activity
-            android:name="de.ofplabs.mypassword_manager.SecondStartActivity"
-        android:label="@string/title_activity_second_start"</activity>
-        <activity
             android:name="de.ofplabs.mypassword_manager.AccountViewActivity"
-            android:label="@string/action_settings"
+            android:label="@string/title_activity_account_view"
             android:parentActivityName="de.ofplabs.mypassword_manager.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="de.ofplabs.mypassword_manager.MainActivity" />
+        </activity>
+        <activity
+            android:name="de.ofplabs.mypassword_manager.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="de.ofplabs.mypassword_manager.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="de.ofplabs.mypassword_manager.MainActivity" />
+        </activity>
+        <activity
+            android:name="de.ofplabs.mypassword_manager.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name="de.ofplabs.mypassword_manager.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
         </activity>
     </application>
 
